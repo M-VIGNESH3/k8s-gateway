@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: fit-cont
-          image: muralisocail123/fitness-app:v1.0.1
+          image: muralisocial123/fitness-app:v1.0.1
           resources:
             requests:
               memory: "100Mi"
@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
         - name: flower-cont
-          image: muralisocail123/kyndrl-flower-app:v1.1.0
+          image: muralisocial123/kyndrl-flower-app:v1.1.0
           resources:
             requests:
               memory: "200Mi"
@@ -91,7 +91,7 @@ spec:
     spec:
       containers:
         - name: tran-cont
-          image: muralisocail123/transcation-app:v1.0.0
+          image: muralisocial123/transcation-app:v1.0.0
           resources:
             requests:
               memory: "200Mi"
@@ -123,7 +123,7 @@ spec:
     spec:
       containers:
         - name: ey-cont
-          image: muralisocail123/ey-cart:v1.1.0
+          image: muralisocial123/ey-cart:v1.1.0
           resources:
             requests:
               memory: "200Mi"
@@ -155,7 +155,7 @@ spec:
     spec:
       containers:
         - name: flip-cont
-          image: muralisocail123/flip-clone-kuberox:v1.1.0
+          image: muralisocial123/flip-clone-kuberox:v1.1.0
           resources:
             requests:
               memory: "200Mi"
