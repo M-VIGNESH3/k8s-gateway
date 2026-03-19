@@ -1,13 +1,11 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: demo 
-
+  name: demo
 ---
-
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: fit-d
   namespace: demo
   labels:
@@ -17,61 +15,57 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailbale: 1
+      maxUnavailable: 1
       maxSurge: 1
   selector:
     matchLabels:
       app: fit
-
   template:
     metadata:
-      labels: 
+      labels:
         app: fit
     spec:
       containers:
-      - name: fit-cont
-        image: muralisocail123/fitness-app:v1.0.1
-        resources:
-          requests: 
-            memory: "100mi"
-            cpu: "100m"
-        ports:
-        - containerPorts: 5000
-
+        - name: fit-cont
+          image: muralisocail123/fitness-app:v1.0.1
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 5000
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flower
   namespace: demo
-  labels: 
+  labels:
     app: flower-app
 spec:
   replicas: 3
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailbale: 1
+      maxUnavailable: 1
       maxSurge: 1
-    selector:
-      matchLabels:
+  selector:
+    matchLabels:
+      app: flower-app
+  template:
+    metadata:
+      labels:
         app: flower-app
-    template:
-      metadata:
-        labels: 
-          app: flower-app
-      spec:
-        containers:
+    spec:
+      containers:
         - name: flower-cont
           image: muralisocail123/kyndrl-flower-app:v1.1.0
           resources:
             requests:
-              memory: "200mi"
+              memory: "200Mi"
               cpu: "100m"
           ports:
-            containerPorts: 3015
-
+            - containerPort: 3015
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -85,9 +79,8 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailbale: 1
+      maxUnavailable: 1
       maxSurge: 1
-
   selector:
     matchLabels:
       app: tran-app
@@ -97,15 +90,14 @@ spec:
         app: tran-app
     spec:
       containers:
-      - name: tran-cont
-        image: muralisocail123/transcation-app:v1.0.0
-        resources:
-          requests:
-            memory: "200mi"
-            cpu: "100m"
-        ports:
-          containerPorts: 3000
-
+        - name: tran-cont
+          image: muralisocail123/transcation-app:v1.0.0
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 3000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -119,7 +111,7 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailbale: 1
+      maxUnavailable: 1
       maxSurge: 1
   selector:
     matchLabels:
@@ -130,30 +122,28 @@ spec:
         app: ey-app
     spec:
       containers:
-      - name: ey-cont
-        image: muralisocail123/ey-cart:v1.1.0
-        resources:
-          requests:
-            memory: "200mi"
-            cpu: "100m"
-        ports:
-          containerPorts: 3000
-
+        - name: ey-cont
+          image: muralisocail123/ey-cart:v1.1.0
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 3000
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flip
   namespace: demo
-  labels: 
+  labels:
     app: flip-app
 spec:
   replicas: 3
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailbale: 1
+      maxUnavailable: 1
       maxSurge: 1
   selector:
     matchLabels:
@@ -164,16 +154,11 @@ spec:
         app: flip-app
     spec:
       containers:
-        name: flip-cont
-        image: muralisocail123/flip-clone-kuberox:v1.1.0
-        resources:
-          requests:
-            memory: "200mi"
-            cpu: "100m"
-        ports:
-          containerPorts: 80
-
-
-
-
-
+        - name: flip-cont
+          image: muralisocail123/flip-clone-kuberox:v1.1.0
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 80
