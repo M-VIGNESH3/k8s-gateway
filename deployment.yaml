@@ -33,8 +33,8 @@ spec:
         image: muralisocail123/fitness-app:v1.0.1
         resources:
           requests: 
-            memory: 100mi
-            cpu: 100m
+            memory: "100mi"
+            cpu: "100m"
         ports:
         - containerPorts: 5000
 
@@ -67,8 +67,8 @@ spec:
           image: muralisocail123/kyndrl-flower-app:v1.1.0
           resources:
             requests:
-              memory: 200mi
-              cpu: 100m
+              memory: "200mi"
+              cpu: "100m"
           ports:
             containerPorts: 3015
 
@@ -101,8 +101,8 @@ spec:
         image: muralisocail123/transcation-app:v1.0.0
         resources:
           requests:
-            memory: 200mi
-            cpu: 100m
+            memory: "200mi"
+            cpu: "100m"
         ports:
           containerPorts: 3000
 
@@ -134,8 +134,8 @@ spec:
         image: muralisocail123/ey-cart:v1.1.0
         resources:
           requests:
-            memory: 200mi
-            cpu: 100m
+            memory: "200mi"
+            cpu: "100m"
         ports:
           containerPorts: 3000
 
@@ -168,8 +168,8 @@ spec:
         image: muralisocail123/flip-clone-kuberox:v1.1.0
         resources:
           requests:
-            memory: 200mi
-            cpu: 100m
+            memory: "200mi"
+            cpu: "100m"
         ports:
           containerPorts: 80
 
