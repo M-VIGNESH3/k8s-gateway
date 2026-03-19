@@ -32,7 +32,7 @@ spec:
       - name: fit-cont
         image: muralisocail123/fitness-app:v1.0.1
         resources:
-          request: 
+          requests: 
             memory: 100mi
             cpu: 100m
         ports:
@@ -66,7 +66,7 @@ spec:
         - name: flower-cont
           image: muralisocail123/kyndrl-flower-app:v1.1.0
           resources:
-            request:
+            requests:
               memory: 200mi
               cpu: 100m
           ports:
@@ -100,7 +100,7 @@ spec:
       - name: tran-cont
         image: muralisocail123/transcation-app:v1.0.0
         resources:
-          request:
+          requests:
             memory: 200mi
             cpu: 100m
         ports:
@@ -133,7 +133,7 @@ spec:
       - name: ey-cont
         image: muralisocail123/ey-cart:v1.1.0
         resources:
-          request:
+          requests:
             memory: 200mi
             cpu: 100m
         ports:
@@ -167,7 +167,7 @@ spec:
         name: flip-cont
         image: muralisocail123/flip-clone-kuberox:v1.1.0
         resources:
-          request:
+          requests:
             memory: 200mi
             cpu: 100m
         ports:
