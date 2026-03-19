@@ -91,7 +91,7 @@ spec:
     spec:
       containers:
         - name: tran-cont
-          image: muralisocial123/transcation-app:v1.0.0
+          image: muralisocial123/transaction-app:v1.0.0
           resources:
             requests:
               memory: "200Mi"
