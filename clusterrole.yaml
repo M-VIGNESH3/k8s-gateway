@@ -5,5 +5,5 @@ metadata:
   name: secret-reader
 rules:
 - apiGroups: [""]
-  resources: ["secrets","namespaces", "node"]
+  resources: ["secrets","namespaces", "nodes"]
   verbs: ["get", "watch", "list"]
