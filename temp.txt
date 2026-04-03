@@ -1,0 +1,7 @@
+kubectl config set-credentials murali \
+  --client-certificate=murali.crt \
+  --client-key=murali.key
+
+kubectl config set-context murali-context \
+  --cluster=kubernetes \
+  --user=murali
