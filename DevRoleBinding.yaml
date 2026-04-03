@@ -5,7 +5,7 @@ metadata:
   namespace: clahanstore
 subjects:
 - kind: User
-  name: [ "murali", "asad","mohon","dhaniga" ]
+  name: [ murali, asad,mohon,dhaniga ]
   apiGroup: rbac.authorization.k8s.io
 
 roleRef:
