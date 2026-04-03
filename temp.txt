@@ -1,7 +1,7 @@
-kubectl config set-credentials murali \
-  --client-certificate=murali.crt \
-  --client-key=murali.key
+kubectl config set-credentials asad \
+  --client-certificate=asad.crt \
+  --client-key=asad.key
 
-kubectl config set-context murali-context \
+kubectl config set-context asad-context \
   --cluster=kubernetes \
-  --user=murali
+  --user=asad
