@@ -5,6 +5,6 @@ metadata:
   name: development
 rules:
 - apiGroups: [""]
-  resources: ["pods"]
+  resources: ["pods","deployments"]
   verbs: ["get", "list", "watch", "create", "delete"]
 
