@@ -20,7 +20,7 @@ spec:
       labels:
         app: front
     spec:
-      nodeselector:
+      nodeSelector:
         env: test
       containers:
         - name: front
