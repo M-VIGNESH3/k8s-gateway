@@ -29,6 +29,14 @@ spec:
                 operator: In
                 values:
                 - test
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            preference:
+              matchExpressions:
+              - key: envs
+                operator: In
+                values:
+                - test
       containers:
         - name: front
           image: nginx
