@@ -24,8 +24,8 @@ spec:
         env: test
       containers:
         - name: front
-          image: team4devops/ecommerce-frontend-ui:v1.0.0
-          imagePullPolicy: Always
+          image: nginx
+    
           ports:
             - containerPort: 80
               
