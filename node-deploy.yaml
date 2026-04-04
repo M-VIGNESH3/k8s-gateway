@@ -22,13 +22,13 @@ spec:
     spec:
       affinity:
         nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: env
-                operator: In
-                values:
-                - testing
+          # requiredDuringSchedulingIgnoredDuringExecution:
+          #   nodeSelectorTerms:
+          #   - matchExpressions:
+          #     - key: env
+          #       operator: In
+          #       values:
+          #       - test
           preferredDuringSchedulingIgnoredDuringExecution:
           - weight: 1
             preference:
@@ -36,7 +36,7 @@ spec:
               - key: envs
                 operator: In
                 values:
-                - test
+                - testing
       containers:
         - name: front
           image: nginx
