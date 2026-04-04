@@ -26,9 +26,9 @@ spec:
             nodeSelectorTerms:
             - matchExpressions:
               - key: env
-              operator: In
-              values:
-              - test
+                operator: In
+                values:
+                - test
       containers:
         - name: front
           image: nginx
