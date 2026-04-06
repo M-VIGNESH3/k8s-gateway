@@ -12,8 +12,15 @@ spec:
         kinds:
         - Pod
     validate:
-      message: "Only official Docker Hub images (docker.io/library) are allowed"
-      pattern:
-        spec:
+      message: "Only official Docker Hub images are allowed"
+      anyPattern:
+      - spec:
           containers:
           - image: "docker.io/library/*"
+      - spec:
+          containers:
+          - image: "library/*"
+      - spec:
+          containers:
+          - image: "*"
+ 
